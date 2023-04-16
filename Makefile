@@ -7,7 +7,7 @@
 #
 ################################################################################
 # \copyright
-# Copyright 2018-2022, Cypress Semiconductor Corporation (an Infineon company)
+# Copyright 2018-2023, Cypress Semiconductor Corporation (an Infineon company)
 # SPDX-License-Identifier: Apache-2.0
 # 
 # Licensed under the Apache License, Version 2.0 (the "License");
@@ -40,7 +40,7 @@ MTB_TYPE=COMBINED
 # To change the target, it is recommended to use the Library manager
 # ('make library-manager' from command line), which will also update Eclipse IDE launch
 # configurations.
-TARGET=CY8CKIT-062-WIFI-BT
+TARGET=CY8CPROTO-062-4343W
 
 # Name of application (used to derive name of final linked file).
 #
@@ -162,11 +162,13 @@ CY_GETLIBS_SHARED_PATH=../
 #
 CY_GETLIBS_SHARED_NAME=mtb_shared
 
-# Absolute path to the compiler's "bin" directory.
-#
+# Absolute path to the compiler's "bin" directory. The variable name depends on the 
+# toolchain used for the build. Refer to the ModusToolbox user guide to get the correct
+# variable name for the toolchain used in your build.
+# 
 # The default depends on the selected TOOLCHAIN (GCC_ARM uses the ModusToolbox
 # software provided compiler by default).
-CY_COMPILER_PATH=
+CY_COMPILER_GCC_ARM_DIR=
 
 
 # Locate ModusToolbox helper tools folders in default installation
@@ -177,7 +179,7 @@ CY_TOOLS_PATHS ?= $(wildcard \
     $(HOME)/ModusToolbox/tools_* \
     /Applications/ModusToolbox/tools_*)
 
-# If you install ModusToolbox IDE in a custom location, add the path to its
+# If you install ModusToolbox software in a custom location, add the path to its
 # "tools_X.Y" folder (where X and Y are the version number of the tools
 # folder). Make sure you use forward slashes.
 CY_TOOLS_PATHS+=

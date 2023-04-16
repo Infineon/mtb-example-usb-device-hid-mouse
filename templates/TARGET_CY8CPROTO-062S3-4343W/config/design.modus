@@ -7,7 +7,7 @@
                     <Personality template="dap" version="2.0">
                         <Param id="dbgMode" value="SWD"/>
                         <Param id="traceModeParallel" value="0"/>
-                        <Param id="traceModeSerial" value="true"/>
+                        <Param id="traceModeSerial" value="false"/>
                     </Personality>
                 </Block>
                 <Block location="csd[0].csd[0]">
@@ -399,6 +399,7 @@
                     <Personality template="fll" version="4.0">
                         <Param id="configuration" value="auto"/>
                         <Param id="desiredFrequency" value="100.000"/>
+                        <Param id="enableOutputDivider" value="false"/>
                     </Personality>
                 </Block>
                 <Block location="srss[0].clock[0].hfclk[0]">
@@ -506,20 +507,12 @@
             </BlockConfig>
             <Netlist>
                 <Net>
-                    <Port name="cpuss[0].dap[0].clock_trace_in[0]"/>
-                    <Port name="peri[0].div_8[1].clk[0]"/>
-                </Net>
-                <Net>
                     <Port name="cpuss[0].dap[0].swj_swclk_tclk[0]"/>
                     <Port name="ioss[0].port[6].pin[7].digital_in[0]"/>
                 </Net>
                 <Net>
                     <Port name="cpuss[0].dap[0].swj_swdio_tms[0]"/>
                     <Port name="ioss[0].port[6].pin[6].digital_inout[0]"/>
-                </Net>
-                <Net>
-                    <Port name="cpuss[0].dap[0].swj_swo_tdo[0]"/>
-                    <Port name="ioss[0].port[6].pin[4].digital_out[0]"/>
                 </Net>
                 <Net>
                     <Port name="csd[0].csd[0].clock[0]"/>

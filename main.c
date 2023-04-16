@@ -8,7 +8,7 @@
 *
 *
 *******************************************************************************
-* Copyright 2021-2022, Cypress Semiconductor Corporation (an Infineon company) or
+* Copyright 2021-2023, Cypress Semiconductor Corporation (an Infineon company) or
 * an affiliate of Cypress Semiconductor Corporation.  All rights reserved.
 *
 * This software, including source code, documentation and related
@@ -39,7 +39,6 @@
 * of such system or application assumes all risk of such use and in doing
 * so agrees to indemnify Cypress against all liability.
 *******************************************************************************/
-
 #include "cy_pdl.h"
 #include "cyhal.h"
 #include "cybsp.h"
@@ -47,7 +46,6 @@
 #include <string.h>
 #include "USB.h"
 #include "USB_HID.h"
-
 
 
 /*********************************************************************
@@ -239,7 +237,6 @@ int main(void)
 * Return:
 *  void
 ***********************************************************************/
-
 static void usb_add_hid(void) {
     USB_HID_INIT_DATA InitData;
     USB_ADD_EP_INFO   EPIntIn;
